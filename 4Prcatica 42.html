@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 42-->
+
+<head>
+    <title>Practica 42</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        //class Persona ***
+        function People(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.printnombre = printnombre;
+        }
+        //class Print ***
+        function printnombre() {
+            document.write(this.nombre);
+            document.write('<br>');
+            document.write('tiene');
+            document.write('<br>');
+            document.write(this.edad);
+            document.write('<br>');
+            document.write('años.');
+        }
+        var mayor = 0;
+        var vector = new Array(4);
+        vector[0] = new People('ana', 50);
+        vector[1] = new People('mimi', 25);
+        vector[2] = new People('lila', 15);
+        vector[3] = new People('mia', 55);
+        var f;
+        for (f = 1; f < vector.length; f++) {
+            if (vector[f].edad > vector[mayor].edad) {
+                mayor = f;
+            }
+        }
+        document.write('Estas son las personas mayores de edad:');
+        document.write('<br>');
+        var f;
+        for (f = 1; f < vector.length; f++) {
+            if (vector[f].edad == vector[mayor].edad) {
+                vector[f].printnombre();
+            }
+        }
+    </script>
+</body>
+
+</html>
